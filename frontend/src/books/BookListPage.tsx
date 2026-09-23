@@ -68,21 +68,21 @@ export function BookListPage() {
           </thead>
           <tbody>
             {books.map((book) => (
-              <tr className="book-item" key={book.id ?? `${book.title}-${book.author}`}>
+              <tr data-cy="book-item" className="book-item" key={book.id ?? `${book.title}-${book.author}`}>
                 <td>{book.title}</td>
                 <td>{book.author}</td>
-                <td>{book.available_copies}</td>
+                <td data-cy="available_copies">{book.available_copies}</td>
                 <td>{book.total_copies}</td>
                 <td>
                   {book.id !== undefined && (
                     <>
-                      <button type="button" onClick={() => void borrowBook(book.id!)}>
+                      <button data-cy="borrow" type="button" onClick={() => void borrowBook(book.id!)}>
                         Borrow
                       </button>
-                      <button type="button" onClick={() => void returnBook(book.id!)}>
+                      <button data-cy="return" type="button" onClick={() => void returnBook(book.id!)}>
                         Return
                       </button>
-                      <button type="button" onClick={() => void deleteBook(book.id!)}>
+                      <button data-cy="delete" type="button" onClick={() => void deleteBook(book.id!)}>
                         Delete
                       </button>
                     </>

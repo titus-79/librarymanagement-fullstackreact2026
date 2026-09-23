@@ -34,6 +34,7 @@ export function AddBookPage() {
           <span>Title:&nbsp;</span>
           <input
             type="text"
+            data-cy="title"
             id="title"
             name="title"
             required
@@ -46,6 +47,7 @@ export function AddBookPage() {
           <span>Author:&nbsp;</span>
           <input
             type="text"
+            data-cy="author"
             id="author"
             name="author"
             required
@@ -58,6 +60,7 @@ export function AddBookPage() {
           <span>Total Copies:&nbsp;</span>
           <input
             type="number"
+            data-cy="copies"
             id="copies"
             name="totalCopies"
             required
